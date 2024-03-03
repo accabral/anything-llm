@@ -34,7 +34,7 @@ export default function MultiUserAuth() {
         <div className="flex items-start justify-between pt-11 pb-9 rounded-t">
           <div className="flex items-center flex-col">
             <h3 className="text-md md:text-2xl font-bold text-gray-900 dark:text-white text-center">
-              Sign In
+              Acessar o sistema
             </h3>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function MultiUserAuth() {
               <input
                 name="username"
                 type="text"
-                placeholder="Username"
+                placeholder="Usuário"
                 className="bg-opacity-40 border-gray-300 text-sm rounded-lg block w-full p-2.5 bg-[#222628] placeholder-[#FFFFFF99] text-white focus:ring-blue-500 focus:border-blue-500"
                 required={true}
                 autoComplete="off"
@@ -55,7 +55,7 @@ export default function MultiUserAuth() {
               <input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Senha"
                 className="bg-opacity-40 border-gray-300 text-sm rounded-lg block w-full p-2.5 bg-[#222628] placeholder-[#FFFFFF99] text-white focus:ring-blue-500 focus:border-blue-500"
                 required={true}
                 autoComplete="off"
@@ -75,7 +75,7 @@ export default function MultiUserAuth() {
             type="submit"
             className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-white text-sm font-bold px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-white dark:text-neutral-700 dark:border-white dark:hover:text-white dark:hover:bg-slate-600 dark:focus:ring-gray-600 w-full"
           >
-            {loading ? "Validating..." : "Login"}
+            {loading ? "Validando..." : "Login"}
           </button>
         </div>
       </div>

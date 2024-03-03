@@ -19,7 +19,7 @@ function CopyMessage({ message }) {
       <div className="mt-3 relative">
         <button
           data-tooltip-id="copy-assistant-text"
-          data-tooltip-content="Copy"
+          data-tooltip-content="Copiar"
           className="text-zinc-300"
           onClick={() => copyText(message)}
         >

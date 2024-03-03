@@ -34,7 +34,7 @@ export default function ThreadContainer({ workspace }) {
     return (
       <div className="flex flex-col bg-pulse w-full h-10 items-center justify-center">
         <p className="text-xs text-slate-600 animate-pulse">
-          loading threads....
+          Carregando tópicos...
         </p>
       </div>
     );
@@ -77,7 +77,7 @@ function NewThreadButton({ workspace }) {
     setLoading(true);
     const { thread, error } = await Workspace.threads.new(workspace.slug);
     if (!!error) {
-      showToast(`Could not create thread - ${error}`, "error", { clear: true });
+      showToast(`Não foi possível criar o tópico - ${error}`, "error", { clear: true });
       setLoading(false);
       return;
     }
@@ -105,9 +105,9 @@ function NewThreadButton({ workspace }) {
         </div>
 
         {loading ? (
-          <p className="text-left text-slate-100 text-sm">Starting Thread...</p>
+          <p className="text-left text-slate-100 text-sm">Iniciando tópico....</p>
         ) : (
-          <p className="text-left text-slate-100 text-sm">New Thread</p>
+          <p className="text-left text-slate-100 text-sm">Novo Tópico</p>
         )}
       </div>
     </button>

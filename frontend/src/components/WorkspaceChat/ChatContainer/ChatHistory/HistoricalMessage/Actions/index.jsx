@@ -28,14 +28,14 @@ const Actions = ({ message, feedbackScore, chatId, slug }) => {
             isSelected={selectedFeedback === true}
             handleFeedback={() => handleFeedback(true)}
             tooltipId={`${chatId}-thumbs-up`}
-            tooltipContent="Good response"
+            tooltipContent="Boa resposta"
             IconComponent={ThumbsUp}
           />
           <FeedbackButton
             isSelected={selectedFeedback === false}
             handleFeedback={() => handleFeedback(false)}
             tooltipId={`${chatId}-thumbs-down`}
-            tooltipContent="Bad response"
+            tooltipContent="Resposta ruim"
             IconComponent={ThumbsDown}
           />
         </>
@@ -84,7 +84,7 @@ function CopyMessage({ message }) {
         <button
           onClick={() => copyText(message)}
           data-tooltip-id="copy-assistant-text"
-          data-tooltip-content="Copy"
+          data-tooltip-content="Copiar"
           className="text-zinc-300"
         >
           {copied ? (

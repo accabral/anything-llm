@@ -46,13 +46,13 @@ export default function NewUserModal() {
                   htmlFor="username"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Username
+                  Usuário
                 </label>
                 <input
                   name="username"
                   type="text"
                   className="bg-zinc-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="My username"
+                  placeholder="Usuário"
                   minLength={2}
                   required={true}
                   autoComplete="off"
@@ -63,13 +63,13 @@ export default function NewUserModal() {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Password
+                  Senha
                 </label>
                 <input
                   name="password"
                   type="password"
                   className="bg-zinc-900 border border-gray-500 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="Your password"
+                  placeholder="Senha do usuário"
                   required={true}
                   minLength={8}
                   autoComplete="off"
@@ -77,8 +77,7 @@ export default function NewUserModal() {
               </div>
               {error && <p className="text-red-400 text-sm">Error: {error}</p>}
               <p className="text-slate-200 text-xs md:text-sm">
-                After creating your account you will be able to login with these
-                credentials and start using workspaces.
+                Após criar sua conta, você poderá fazer login com essas credenciais e começar a usar os espaços de trabalho.
               </p>
             </div>
           </div>
@@ -87,7 +86,7 @@ export default function NewUserModal() {
               type="submit"
               className="w-full transition-all duration-300 border border-slate-200 px-4 py-2 rounded-lg text-white text-sm items-center flex gap-x-2 hover:bg-slate-200 hover:text-slate-800 focus:ring-gray-800 text-center justify-center"
             >
-              Accept Invitation
+              Aceitar convite
             </button>
           </div>
         </form>

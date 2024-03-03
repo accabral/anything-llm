@@ -14,19 +14,19 @@ export default function AccountModal({ user, hideModal }) {
     formData.append("file", file);
     const { success, error } = await System.uploadPfp(formData);
     if (!success) {
-      showToast(`Failed to upload profile picture: ${error}`, "error");
+      showToast(`Falha ao carregar a foto de perfil: ${error}`, "error");
       return;
     }
 
     const pfpUrl = await System.fetchPfp(user.id);
     setPfp(pfpUrl);
-    showToast("Profile picture uploaded.", "success");
+    showToast("Foto de perfil carregada.", "success");
   };
 
   const handleRemovePfp = async () => {
     const { success, error } = await System.removePfp();
     if (!success) {
-      showToast(`Failed to remove profile picture: ${error}`, "error");
+      showToast(`Falha ao remover a foto de perfil: ${error}`, "error");
       return;
     }
 
@@ -51,10 +51,10 @@ export default function AccountModal({ user, hideModal }) {
         storedUser.username = data.username;
         localStorage.setItem(AUTH_USER, JSON.stringify(storedUser));
       }
-      showToast("Profile updated.", "success", { clear: true });
+      showToast("Perfil atualizado.", "success", { clear: true });
       hideModal();
     } else {
-      showToast(`Failed to update user: ${error}`, "error");
+      showToast(`Falha ao atualizar usuário: ${error}`, "error");
     }
   };
 
@@ -65,7 +65,7 @@ export default function AccountModal({ user, hideModal }) {
     >
       <div className="relative w-[500px] max-w-2xl max-h-full bg-main-gradient rounded-lg shadow">
         <div className="flex items-start justify-between p-4 border-b rounded-t border-gray-500/50">
-          <h3 className="text-xl font-semibold text-white">Edit Account</h3>
+          <h3 className="text-xl font-semibold text-white">Editar Conta</h3>
           <button
             onClick={hideModal}
             type="button"
@@ -95,7 +95,7 @@ export default function AccountModal({ user, hideModal }) {
                   <div className="flex flex-col items-center justify-center p-3">
                     <Plus className="w-8 h-8 text-white/80 m-2" />
                     <span className="text-white text-opacity-80 text-sm font-semibold">
-                      Profile Picture
+                      Foto de perfil
                     </span>
                     <span className="text-white text-opacity-60 text-xs">
                       800 x 800
@@ -109,7 +109,7 @@ export default function AccountModal({ user, hideModal }) {
                   onClick={handleRemovePfp}
                   className="mt-3 text-white text-opacity-60 text-sm font-medium hover:underline"
                 >
-                  Remove Profile Picture
+                  Remover foto de perfil
                 </button>
               )}
             </div>
@@ -120,13 +120,13 @@ export default function AccountModal({ user, hideModal }) {
                 htmlFor="username"
                 className="block mb-2 text-sm font-medium text-white"
               >
-                Username
+                Usuário
               </label>
               <input
                 name="username"
                 type="text"
                 className="bg-zinc-900 placeholder:text-white/20 border-gray-500 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="User's username"
+                placeholder="Usuário"
                 minLength={2}
                 defaultValue={user.username}
                 required
@@ -138,13 +138,13 @@ export default function AccountModal({ user, hideModal }) {
                 htmlFor="password"
                 className="block mb-2 text-sm font-medium text-white"
               >
-                New Password
+                Nova senha
               </label>
               <input
                 name="password"
                 type="password"
                 className="bg-zinc-900 placeholder:text-white/20 border-gray-500 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder={`${user.username}'s new password`}
+                placeholder={`Nova senha de ${user.username}`}
               />
             </div>
           </div>
@@ -154,13 +154,13 @@ export default function AccountModal({ user, hideModal }) {
               type="button"
               className="px-4 py-2 rounded-lg text-white bg-transparent hover:bg-stone-900"
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="submit"
               className="px-4 py-2 rounded-lg text-white bg-transparent border border-slate-200 hover:bg-slate-200 hover:text-slate-800"
             >
-              Update Account
+              Salvar
             </button>
           </div>
         </form>

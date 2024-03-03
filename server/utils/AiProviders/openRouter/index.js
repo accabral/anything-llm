@@ -19,7 +19,7 @@ class OpenRouterLLM {
       apiKey: process.env.OPENROUTER_API_KEY,
       baseOptions: {
         headers: {
-          "HTTP-Referer": "https://useanything.com",
+          "HTTP-Referer": "https://baruk.me",
           "X-Title": "AnythingLLM",
         },
       },

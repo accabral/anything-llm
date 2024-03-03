@@ -19,7 +19,7 @@ const DEFAULT_SETTINGS = {
   assistantBgColor: "#2563eb", // assistant text bubble color
   noSponsor: null, // Shows sponsor in footer of chat
   sponsorText: "Powered by AnythingLLM", // default sponsor text
-  sponsorLink: "https://useanything.com", // default sponsor link
+  sponsorLink: "https://baruk.me", // default sponsor link
 
   // behaviors
   openOnLoad: "off", // or "on"

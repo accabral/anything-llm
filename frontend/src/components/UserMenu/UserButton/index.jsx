@@ -75,14 +75,14 @@ export default function UserButton() {
                 onClick={handleOpenAccountModal}
                 className="text-white hover:bg-slate-200/20 w-full text-left px-4 py-1.5 rounded-md"
               >
-                Account
+                Conta
               </button>
             )}
             <a
               href={supportEmail}
               className="text-white hover:bg-slate-200/20 w-full text-left px-4 py-1.5 rounded-md"
             >
-              Support
+              Suporte
             </a>
             <button
               onClick={() => {
@@ -94,7 +94,7 @@ export default function UserButton() {
               type="button"
               className="text-white hover:bg-slate-200/20 w-full text-left px-4 py-1.5 rounded-md"
             >
-              Sign out
+              Sair
             </button>
           </div>
         </div>

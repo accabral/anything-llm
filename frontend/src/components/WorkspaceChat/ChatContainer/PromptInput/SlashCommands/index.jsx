@@ -7,7 +7,7 @@ export default function SlashCommandsButton({ showing, setShowSlashCommand }) {
     <div
       id="slash-cmd-btn"
       data-tooltip-id="tooltip-slash-cmd-btn"
-      data-tooltip-content="View all available slash commands for chatting."
+      data-tooltip-content="Visualizar todos os comandos de barra disponíveis para conversar."
       onClick={() => setShowSlashCommand(!showing)}
       className={`flex justify-center items-center opacity-60 hover:opacity-100 cursor-pointer ${
         showing ? "!opacity-100" : ""
@@ -16,7 +16,7 @@ export default function SlashCommandsButton({ showing, setShowSlashCommand }) {
       <img
         src={SlashCommandIcon}
         className="w-6 h-6 pointer-events-none"
-        alt="Slash commands button"
+        alt="Botão de comandos da barra"
       />
       <Tooltip
         id="tooltip-slash-cmd-btn"
@@ -62,7 +62,7 @@ export function SlashCommands({ showing, setShowing, sendCommand }) {
           <div className="w-full flex-col text-left flex pointer-events-none">
             <div className="text-white text-sm font-bold">/reset</div>
             <div className="text-white text-opacity-60 text-sm">
-              Clear your chat history and begin a new chat
+              Limpe o histórico do chat e comece uma nova conversa
             </div>
           </div>
         </button>

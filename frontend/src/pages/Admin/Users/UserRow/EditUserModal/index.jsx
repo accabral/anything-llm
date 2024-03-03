@@ -26,7 +26,7 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
       <div className="relative bg-main-gradient rounded-lg shadow">
         <div className="flex items-start justify-between p-4 border-b rounded-t border-gray-500/50">
           <h3 className="text-xl font-semibold text-white">
-            Edit {user.username}
+            Editar {user.username}
           </h3>
           <button
             onClick={closeModal}
@@ -45,7 +45,7 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
                   htmlFor="username"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Username
+                  Usuário
                 </label>
                 <input
                   name="username"
@@ -63,13 +63,13 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  New Password
+                  Nova senha
                 </label>
                 <input
                   name="password"
                   type="text"
                   className="bg-zinc-900 placeholder:text-white/20 border-gray-500 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder={`${user.username}'s new password`}
+                  placeholder={`Nova senha de ${user.username}`}
                   autoComplete="off"
                 />
               </div>
@@ -78,7 +78,7 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
                   htmlFor="role"
                   className="block mb-2 text-sm font-medium text-white"
                 >
-                  Role
+                  Perfil
                 </label>
                 <select
                   name="role"
@@ -87,10 +87,10 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
                   onChange={(e) => setRole(e.target.value)}
                   className="rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white border-gray-500 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  <option value="default">Default</option>
-                  <option value="manager">Manager</option>
+                  <option value="default">Padrão</option>
+                  <option value="manager">Editor</option>
                   {currentUser?.role === "admin" && (
-                    <option value="admin">Administrator</option>
+                    <option value="admin">Administrador</option>
                   )}
                 </select>
                 <RoleHintDisplay role={role} />
@@ -104,13 +104,13 @@ export default function EditUserModal({ currentUser, user, closeModal }) {
               type="button"
               className="px-4 py-2 rounded-lg text-white hover:bg-stone-900 transition-all duration-300"
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="submit"
               className="transition-all duration-300 border border-slate-200 px-4 py-2 rounded-lg text-white text-sm items-center flex gap-x-2 hover:bg-slate-200 hover:text-slate-800 focus:ring-gray-800"
             >
-              Update user
+              Salvar
             </button>
           </div>
         </form>

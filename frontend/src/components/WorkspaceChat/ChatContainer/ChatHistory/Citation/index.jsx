@@ -48,7 +48,7 @@ export default function Citations({ sources = [] }) {
           open ? "pb-2" : ""
         } hover:text-white/75 transition-all duration-300`}
       >
-        {open ? "Hide Citations" : "Show Citations"}
+        {open ? "Ocultar referências" : "Ver referências"}
         <CaretRight
           className={`w-3.5 h-3.5 inline-block ml-1 transform transition-transform duration-300 ${
             open ? "rotate-90" : ""
@@ -143,7 +143,7 @@ function CitationDetailModal({ source, onClose }) {
           </div>
           {references > 1 && (
             <p className="text-xs text-gray-400 mt-2">
-              Referenced {references} times.
+              Referenciado {references} vezes.
             </p>
           )}
           <button
@@ -174,11 +174,11 @@ function CitationDetailModal({ source, onClose }) {
                       <div className="w-full flex items-center text-xs text-white/60 gap-x-2 cursor-default">
                         <div
                           data-tooltip-id="similarity-score"
-                          data-tooltip-content={`This is the semantic similarity score of this chunk of text compared to your query calculated by the vector database.`}
+                          data-tooltip-content={`Essa é a pontuação de similaridade semântica deste trecho de texto em comparação com sua consulta, calculada pelo banco de dados de vetores da baruk.`}
                           className="flex items-center gap-x-1"
                         >
                           <Info size={14} />
-                          <p>{toPercentString(score)} match</p>
+                          <p>{toPercentString(score)} precisão</p>
                         </div>
                       </div>
                       <Tooltip
