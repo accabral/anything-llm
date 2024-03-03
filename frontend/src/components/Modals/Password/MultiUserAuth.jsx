@@ -33,7 +33,7 @@ export default function MultiUserAuth() {
       <div className="flex flex-col justify-center items-center relative rounded-2xl shadow border-2 border-slate-300 border-opacity-20 w-[400px] login-input-gradient">
         <div className="flex items-start justify-between pt-11 pb-9 rounded-t">
           <div className="flex items-center flex-col">
-            <h3 className="text-md md:text-2xl font-bold text-gray-900 dark:text-white text-center">
+            <h3 className="text-md md:text-2xl font-bold text-white dark:text-white text-center">
               Acessar o sistema
             </h3>
           </div>

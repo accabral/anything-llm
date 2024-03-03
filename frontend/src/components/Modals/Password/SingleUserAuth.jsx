@@ -43,7 +43,7 @@ export default function SingleUserAuth() {
               <input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Senha"
                 className="bg-neutral-800 bg-opacity-40 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#222628] dark:bg-opacity-40 dark:placeholder-[#FFFFFF99] dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required={true}
                 autoComplete="off"
@@ -62,7 +62,7 @@ export default function SingleUserAuth() {
             type="submit"
             className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-white text-sm font-bold px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-white dark:text-neutral-700 dark:border-white dark:hover:text-white dark:hover:bg-slate-600 dark:focus:ring-gray-600 w-full"
           >
-            {loading ? "Validating..." : "Login"}
+            {loading ? "Validando..." : "Login"}
           </button>
         </div>
       </div>
